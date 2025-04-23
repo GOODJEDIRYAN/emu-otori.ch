@@ -10,6 +10,7 @@ This website will serve as the central hub for all my websites and services. Sta
 
 - Fileserver
 - Jellyfin mediaserver
+- Nextcloud
 - Flappy bird
 
 ## Contact
