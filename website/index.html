@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
-    <title>Emu Otori</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./css/pico.min.css">
-=======
-    <link rel="stylesheet" href="../css/pico.min.css">
-    <link rel="icon" href="./Images/grumpy-emu-otori.jpg">
->>>>>>> 2a2f74c1500ca7eb60df109b83627c4353b57d79
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Emu Otori</title>
+  <link rel="stylesheet" href="./css/pico.min.css">
+  <link rel="stylesheet" href="./css/autoscale.css">
+  <script>
+    function scaleContent() {
+      const content = document.querySelector('.scaler-content');
+      if (!content) return;
+
+      // Reset scale first to get true height
+      content.style.transform = 'scale(1)';
+      requestAnimationFrame(() => {
+        const contentHeight = content.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scale = Math.min(1, windowHeight / contentHeight);
+        document.documentElement.style.setProperty('--scale', scale);
+        content.style.transform = `scale(${scale})`;
+      });
+    }
+
+    window.addEventListener('resize', scaleContent);
+    window.addEventListener('load', scaleContent);
+  </script>
 </head>
 <body>
-    <br>
-    <h1 style="text-align: center;">Welcome to My Website</h1>
-    <br>
-    <div class="container">
+  <div class="scaler-wrapper">
+    <div class="scaler-content">
+      <h1 style="text-align: center;">Welcome to My Website</h1>
+
+      <div class="container">
         <div class="content">
-            <br>
-            <h2 style="text-align: center;">About Me</h2>
-            <p style="text-align: center;">Hello, I'm Emu Otori. I'm a computer scientist who focuses on servers, Linux, and hardware. When I'm not working, I enjoy watching anime and playing games.</p>
-            <br>
-            <h2>My Services</h2>
-            <ul>
-                <li><a href="https://files.emu-otori.ch" style="color:#ffffffaa";>File Server</a></li>
-                <li><a href="https://media.emu-otori.ch" style="color:#ffffffaa";>Jellyfin Mediaserver</a></li>
-                <li><a href="https://nextcloud.emu-otori.ch" style="color:#ffffffaa";>Jellyfin Mediaserver</a></li>
-            </ul>
+          <h2 style="text-align: center;">About Me</h2>
+          <p style="text-align: center;">
+            Hello, I'm Emu Otori. I'm a computer scientist who focuses on servers, Linux, and hardware.
+            When I'm not working, I enjoy watching anime and playing games.
+          </p>
+          <h2>My Services</h2>
+          <ul>
+            <li><a href="https://files.emu-otori.ch" style="color:#ffffffaa">File Server</a></li>
+            <li><a href="https://media.emu-otori.ch" style="color:#ffffffaa">Jellyfin Mediaserver</a></li>
+            <li><a href="https://nextcloud.emu-otori.ch" style="color:#ffffffaa">Nextcloud</a></li>
+          </ul>
         </div>
         <div class="content">
-            <h2>My Other Websites</h2>
-            <ul>
-                <li><a href="https://911.emu-otori.ch" style="color:#ffffffaa";>9/11 Flappy bird</a></li>
-                <li><a href="https://emu-otori.ch/test" style="color:#ffffffaa";>Emu Otori</a></li>
-                <li><a href="https://emu-otori.ch/test/courtesy.html" style="color:#ffffffaa";>Emu Otori Testing</a></li>
-            </ul>
+          <h2>My Other Websites</h2>
+          <ul>
+            <li><a href="https://911.emu-otori.ch" style="color:#ffffffaa">9/11 Flappy bird</a></li>
+            <li><a href="https://emu-otori.ch/test" style="color:#ffffffaa">Emu Otori</a></li>
+            <li><a href="https://emu-otori.ch/test/courtesy.html" style="color:#ffffffaa">Emu Otori Testing</a></li>
+          </ul>
         </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <img src="./Images/happy-emu-otori.jpg">
+        <img src="./Images/grumpy-emu-otori.jpg">
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://github.com/GOODJEDIRYAN" style="color:#ffffffaa">My GitHub</a>
+      </div>
     </div>
-    <div style="text-align: center; margin-top: 20px;">
-        <div style="display: inline-block;">
-            <img src="./Images/happy-emu-otori.jpg">
-            <img src="./Images/grumpy-emu-otori.jpg">
-        </div>
-    </div>
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="https://github.com/GOODJEDIRYAN" style="color:#ffffffaa";>My GitHub</a>
-    </div>
+  </div>
 </body>
 </html>
